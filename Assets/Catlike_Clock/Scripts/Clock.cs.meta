@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c4721e0a982b7524d8dea78870a4fdd0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - hourIndicatorPrefab: {fileID: 2672150007009160856, guid: c1e2b87cb79d4234cb5e0fff72000cd6, type: 3}
+  - hourArmPivot: {instanceID: 0}
+  - minuteArmPivot: {instanceID: 0}
+  - secondArmPivot: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
