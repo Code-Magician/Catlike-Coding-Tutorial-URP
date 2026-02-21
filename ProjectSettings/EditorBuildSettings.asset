@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Catlike_Graphs/Scenes/Graphs.unity
+    guid: 2806cb05c55ddf647ba5a913a75b85b1
+  - enabled: 1
     path: Assets/Catlike_Clock/Scenes/Clock.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:

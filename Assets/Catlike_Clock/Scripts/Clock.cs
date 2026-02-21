@@ -3,10 +3,24 @@ using UnityEngine;
 
 public class Clock : MonoBehaviour
 {
-    [SerializeField] GameObject hourIndicatorPrefab;
-    [SerializeField] Transform  hourArmPivot, minuteArmPivot, secondArmPivot;
+    #region Inspector Fields
+    [SerializeField] 
+    GameObject hourIndicatorPrefab;
+
+    [SerializeField] 
+    Transform  hourArmPivot, minuteArmPivot, secondArmPivot;
+
+    #endregion
+
+
+    #region Private Fields
 
     float hoursToDegree = -360f / 12, minutesToDegree = -360f / 60, secondsToDegree = -360f / 60;
+
+    #endregion
+
+
+    #region Mono Methods
 
     private void Awake()
     {
@@ -17,6 +31,11 @@ public class Clock : MonoBehaviour
     {
         RunClock();
     }
+
+    #endregion
+
+
+    #region Clock Functions
 
     private void PlaceHourIndicator()
     {
@@ -39,4 +58,6 @@ public class Clock : MonoBehaviour
         minuteArmPivot.localRotation = Quaternion.Euler(0, 0, minutesToDegree * (float) currentDateTime.TotalMinutes);
         secondArmPivot.localRotation = Quaternion.Euler(0, 0, secondsToDegree * (float) currentDateTime.TotalSeconds);
     }
+
+    #endregion
 }
