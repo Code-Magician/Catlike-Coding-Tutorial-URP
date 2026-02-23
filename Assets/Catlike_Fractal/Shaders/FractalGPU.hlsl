@@ -3,6 +3,8 @@
 #endif
 
 float _Step;
+float4 _SequenceNumbers;
+float4 _ColorA, _ColorB;
 
 void ConfigureProcedural () {
 	#if defined(UNITY_PROCEDURAL_INSTANCING_ENABLED)
@@ -14,10 +16,24 @@ void ConfigureProcedural () {
 	#endif
 }
 
-void ShaderGraphFunction_float (float3 In, out float3 Out) {
-	Out = In;
+float4 GetFractalColor()
+{
+	#if defined(UNITY_PROCEDURAL_INSTANCING_ENABLED)
+		float4 color;
+		color.rgb = lerp(_ColorA.rgb, _ColorB.rgb, frac(unity_InstanceID * _SequenceNumbers.x + _SequenceNumbers.y));
+		color.a = lerp(_ColorA.a, _ColorB.a, frac(unity_InstanceID * _SequenceNumbers.z + _SequenceNumbers.w));
+		return color;
+	#else
+		return _ColorA;
+	#endif
 }
 
-void ShaderGraphFunction_half (half3 In, out half3 Out) {
+void ShaderGraphFunction_float (float3 In, out float3 Out, out float4 FractalColor) {
 	Out = In;
+	FractalColor = GetFractalColor();
+}
+
+void ShaderGraphFunction_half (half3 In, out half3 Out, out float4 FractalColor) {
+	Out = In;
+	FractalColor = GetFractalColor();
 }
