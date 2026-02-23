@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fada9334579804ea6822f9185aca17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depth: 8
+  depth: 6
   mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   material: {fileID: 2100000, guid: 39179812d70ce9d4c819f1640c6d249d, type: 2}
 --- !u!1660057539 &9223372036854775807
