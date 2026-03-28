@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_MAIN_/Scenes/Menu.unity
+    guid: 069479ee01b70e74bb49f641e30b5198
+  - enabled: 1
+    path: Assets/_MAIN_/Scenes/Test.unity
+    guid: 92ab6f117bbd0a64592f724d5eaf272f
+  - enabled: 1
     path: Assets/Catlike_Fractal/Scenes/Fractal.unity
     guid: 0602e59d102dff74ebce6502a8281bfd
   - enabled: 1
